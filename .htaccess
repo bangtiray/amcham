@@ -1,0 +1,14 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ./index.php?/$1 [L,QSA]
+AddType text/x-component .htc
+
+RewriteCond %{HTTP_HOST} ^ksi-indonesia.org$
+RewriteRule ^/?$ "http\:\/\/www\.ksi\-indonesia\.org\/" [R=301,L]
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://tri-pc"
+	Header always unset X-Frame-Options
+</IfModule>

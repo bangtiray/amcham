@@ -1,0 +1,100 @@
+footer {
+    position: relative;
+    width: 100%;
+}
+.container-fluid-ft-top {
+    background: #0c2d59;
+    padding: 30px;
+}
+.container-fluid-ft-btm {
+    background: #be1e2d;
+    padding: 10px 30px;
+}
+.footer-btm-new {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: solid 2px #d8dde6;
+}
+.container-fluid-ft-btm a {
+    display: inline-block;
+}
+.socmed-footer {
+    width: 100%;
+    text-align: right;
+}
+.socmed-footer a {
+    margin-left: 15px;
+}
+.title-ft-nav {
+    font-family: 'open_sansbold';
+    font-weight: bold;
+    font-size: 15px;
+    color: #5876a3;
+    margin-bottom: 15px;
+}
+.call-center-footer {
+    font-family: 'open_sansbold';
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    color: #16325c;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.call-center-footer .media {
+    margin-top: 10px;
+}
+.call-center-footer .media .media-left span {
+    font-size: 24px;
+}
+.date-cc {
+    font-family: 'open_sansregular';
+    color: #5876a3;
+}
+.col-ft-nav .fa {
+    color: #fff;
+    font-size: 18px;
+    width: 22px
+}
+.fa.fa-map-marker {
+    font-size: 24px;
+}
+.col-ft-nav .media {
+    margin-top: 5px;
+}
+.col-ft-nav .media-body {
+    font-size: 14px;
+    color: #fff;
+    line-height: 22px;
+    font-family: 'MyriadProLight';
+}
+.opening-hours {
+    font-family: 'MyriadProLight';
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 13px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.ft-tk .logo .media-body img {
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 991px) {
+    .socmed-footer {
+        text-align: left;
+        margin-top: 30px;
+    }
+    .socmed-footer a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .col-ft-nav {
+        /*padding-bottom: 15px;*/
+    }
+    .ft-tk {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}

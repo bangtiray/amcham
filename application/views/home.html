@@ -1,0 +1,164 @@
+{slider}
+<!-- featured partners -->
+<div class="container-fluid {featured_partners_hide}">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="title-sponsors text-center mt20 mb0">Platinum Members</div>
+        <div class="feature-partners">
+          <div class="owl-carousel owl-theme" id="slider-partners">
+            {featured_partners}
+              <div class="item">
+                <div class="thumb-slider-partners">
+                  <a href="{url}" idcom="{id_com}" class="partners_click">
+                    <img src="{img}">
+                  </a>
+                </div>
+              </div>
+            {/featured_partners}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- highlight -->
+<div class="container-fluid cf-mw">
+  <div class="row">
+    <!-- limit 6 -->
+    {highlight}
+      <div class="col-sm-4 col-md-4 col-xs-12 col-ft-fallery">
+        <div class="thumbnail-amcham">
+          <img src="{img_url}">
+          <a href="{link}" class="link-thumb">
+            <div class="event-type">{tanggal}</div>
+            <div class="title-event-list">{title}</div>
+            <p>{teaser}</p>
+          </a>
+        </div>
+      </div>
+    {/highlight}
+    <div class="col-sm-12 col-md-12 col-xs-12 text-center pt30 pb30">
+      <a class="title-feature" href="{lang_link_see_highlights}">{lang_see_highlights}</a>
+    </div>
+  </div>
+</div>
+
+<!-- partners -->
+
+<div class="container-fluid cf-mw {partners_hide}">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12 p0">
+      <div class="feature-number fn-sponsors">
+        <ul>
+          {partners}
+            <li class="heightsame">
+              <div class="title-sponsors">{category}</div>
+              <div class="owl-carousel owl-theme {category_class}">
+                {data}
+                <div class="item {legal_class}">
+                  <a href="{url}" idcom="{id_com}" class="partners_click">
+                    <img src="{img}" >
+                  </a>
+                </div>
+                {/data}
+              </div>
+            </li>
+          {/partners}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- flag -->
+<div class="container-fluid cf-mw p0">
+  <div class="col-sm-12 col-md-12 col-xs-12 flag-feature">
+    {lang_flag_banner}
+  </div>
+</div>
+
+<!-- event -->
+<div class="container-fluid cf-list-event">
+  <div class="container">
+    <div class="row {dsps_events_highlights}">
+      <!-- limit 6 -->
+      {events}
+        <div class="col-sm-6 col-md-4 col-xs-12 sameheight mb30">
+          <div class="list-event {color}-border"><!-- red // darkblue -->
+            <div class="event-type">{category}</div>
+            <div class="title-event-list"><a href="{url}">{name}</a></div>
+            <div class="media">
+              <div class="media-left media-middle"><span class="icon-time"></span></div>
+              <div class="media-body media-middle">{time}</div>
+            </div>
+            <div class="media">
+              <div class="media-left media-middle"><span class="icon-maps"></span></div>
+              <div class="media-body media-middle">{place}</div>
+            </div>
+          </div>
+        </div>
+      {/events}
+    </div>
+    <div class="col-sm-12 col-md-12 col-xs-12 text-center pb30">
+      <a class="title-feature" href="{lang_link_see_events}">{lang_see_events}</a>
+    </div>
+  </div>
+</div>
+<!-- publication -->
+<div class="container-fluid cf-thumb-public">
+  <div class="container">
+    <div class="row">
+      <!-- limit 5 -->
+      {publication}
+      <div class="col-sm-12 col-md-12 col-xs-12 col-w20">
+        <div class="thumbnail-amcham thumb-public">
+          {img}          
+          <a class="link-thumb" href="{base_url}news/detail/{url}">
+            <div class="title-event-list">{title}</div>
+          </a>
+        </div>
+      </div>
+      {/publication}
+      <div class="col-sm-12 col-md-12 col-xs-12 text-center pt30">
+        <a class="title-feature" href="{lang_link_see_publications}">{lang_see_publications}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{widget_latest_feed}
+
+<div class="container-fluid ">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-xs-12 text-center"> 
+        <div class="title-event-list mt20 mb0">PHOTO GALLERY</div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-xs-12">
+        <div class="feature-partners">
+          <div class="owl-carousel owl-theme" id="slider_gallery_photo">
+            {gallery_photo}
+              <div class="item">
+                <div class="thumb-slider-partners">
+                  <a href="{url_photo}">
+                    {img_photo}
+                    <!-- <img src="http://tri-pc/amcham/images/gallery/5b17cef536eba%20-%20img_7224%20web.jpg"> -->
+                  </a>
+                    <div class="desc-photos">{description_photo}</div>
+                </div>
+              </div>
+            {/gallery_photo}
+              <div class="item">
+                <div class="thumb-slider-partners more-video">
+                  <a href="http://tri-pc/amcham/en/gallery/photo">
+                    See More
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

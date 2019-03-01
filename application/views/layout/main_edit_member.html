@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{head_title}</title>
+
+    <!-- Bootstrap -->
+    <link rel="icon" href="{base_url}asset/images/favicon.png">
+
+    <link href="{base_url}asset/css/bootstrap{minify}.css" rel="stylesheet">
+    <link href="{base_url}asset/css/style{minify}.css" rel="stylesheet">
+    <link href="{base_url}asset/css/home-responsive{minify}.css" rel="stylesheet">
+    <link href="{base_url}asset/css/datepicker.css" rel="stylesheet">
+    <script src="{base_url}asset/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/jquery-ui{minify}.js"></script>
+	<script src="{base_url}asset/js/conformity.min.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 8 ]>
+<script>
+alert('Maaf, keseluruhan fitur dari situs ini hanya didukung oleh Internet Explorer versi 9 atau lebih.');
+</script>
+<!--[if !IE]><!-->
+<!-- <script src="/Scripts/js/ie10.js"></script> -->
+<!--<![endif]-->
+
+    <script>var base_url = '{base_url}'; var this_controller= '{this_controller}'; var full_url = window.location.href; var language='{language}';</script>
+    <script src="{base_url}lang"></script>
+  </head>
+  <body>
+	<!-- BEGIN EFFECTIVE MEASURE CODE -->
+
+	<!-- COPYRIGHT EFFECTIVE MEASURE -->
+	<!--
+	<script type="text/javascript">
+
+		(function() {
+
+			var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+
+			em.src = ('https:' == document.location.protocol ? 'https://id-ssl' : 'http://id-cdn') + '.effectivemeasure.net/em.js';
+
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+
+		})();
+
+	</script>
+
+	<noscript>
+
+		<img src="//id.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+
+	</noscript>
+	-->
+	<!--END EFFECTIVE MEASURE CODE -->
+	
+   <div class="container-fluid">
+	<div class="container-fluid">
+	    {slider_widget}
+            {content}
+        </div>
+
+    </div>
+    
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="{base_url}assets/plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/script{minify}.js"></script>
+    <script type="text/javascript" src="{base_url}assets/js/mygrid{minify}.js"></script>
+    <script src="{base_url}asset/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{base_url}asset/js/futuready{minify}.js"></script>
+    <script type="text/javascript" src="{base_url}asset/js/bootstrap-datepicker.js"></script>
+		{webtrens_widget}
+  </body>
+</html>

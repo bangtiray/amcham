@@ -1,0 +1,375 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12 p0">
+            <div class="banner-top responsive-banner">
+                {banner_top}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid cf-grey4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+                <div class="title-pagination">Join AmCham</div>
+                <!-- <div class="title-pagination">{page_heading}</div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid cf-content">
+    <div class="container">
+        <div class="row">
+
+            <!-- <div class="{hide_breadcrumb}">
+        {breadcrumb_frontend}
+      </div> -->
+
+            <div class="col-sm-12 col-md-12 col-xs-12 pt30 pb20">
+                <div class="media media-content">
+                    <div class="media-body">
+                        <div class="frame-content">
+
+                            <div class="title-event-list mt50">Please complete this form</div>
+                            <hr class="line-content">
+                            <div class="title-content mb15">APPLICANT DETAILS</div>
+                            <form class="form-join" action='{base_url}{lang}/member/register_proses' id='form1' method="POST">
+                                <input type="text" class="form-control input-amcham hide" name="member[member_category_id]" value="{id_category}">
+                                <div class="row row-form">
+                                    <div class="col-sm-4 col-md-4 col-xs-6 col-form">
+                                        <label class="label-amcham">Last Name <span class="red">*</span></label>
+                                        <input type="text" class="form-control input-amcham" name="member[lastname]" required>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-xs-6 col-form">
+                                        <label class="label-amcham">First Name <span class="red">*</span></label>
+                                        <input type="text" class="form-control input-amcham" name="member[firstname]" required>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-xs-12 col-form">
+                                        <label class="label-amcham">Mr/Ms/etc</label>
+                                        <input type="text" class="form-control input-amcham" name="member[prefix_name]">
+                                    </div>
+                                </div>
+                                <div class="row row-form">
+                                    <div class="col-sm-4 col-md-4 col-xs-6 col-form">
+                                        <label class="label-amcham">Job Title</label>
+                                        <input type="text" class="form-control input-amcham" name="member[job]">
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-xs-12 col-form {is_hide}">
+                                        <label class="label-amcham">Email <span class="red">*</span></label>
+                                        <input type="text" class="form-control input-amcham" name="member[email]" {is_required} 
+                                        data-parsley-member[email]="">
+                                    </div>
+                                </div>
+                                <div class="row row-form">
+                                </div>
+
+                                <hr class="line-content">
+                                <div class="title-content mb15">{form_applicant_name}</div>
+                                <div class="row row-form">
+                                    <div class="row row-form">
+                                        <div class="col-sm-12 col-md-12 col-xs-12 col-form">
+                                            <label class="label-amcham">Company Name <span class="red">*</span></label>
+                                            <input type="text" class="form-control input-amcham" name="company[name_in]" required>
+                                        </div>
+                                        
+                                  </div>
+                                  <div class="row row-form">
+                                    <div class="col-sm-12 col-md-12 col-xs-12 col-form">
+                                        <label class="label-amcham">{form_company_address}</label>
+                                        <textarea rows="5" class="form-control input-amcham" name="company[address]" ></textarea>
+                                    </div>
+                                </div>
+                                <div class="row row-form">
+                                    <div class="col-sm-6 col-md-6 col-xs-6 col-form">
+                                        <label class="label-amcham">City</label>
+                                        <input type="text" class="form-control input-amcham" name="company[city]">
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-xs-6 col-form">
+                                        <label class="label-amcham">Postal Code</label>
+                                        <input type="telp" class="form-control input-amcham" name="company[postal_code]">
+                                    </div>
+                                </div>
+                                <div class="row row-form">
+                                    <div class="col-sm-6 col-md-6 col-xs-6 col-form">
+                                        <label class="label-amcham">Company Headquarters (country / state)</label>
+                                        <input type="text" class="form-control input-amcham" name="company[headquarters]">
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-xs-6 col-form">
+                                        <label class="label-amcham">Website</label>
+                                        <input type="text" class="form-control input-amcham" name="company[website]">
+                                    </div>
+                                </div>
+                                <div class="row row-form">
+                                    <div class="col-sm-6 col-md-6 col-xs-6 col-form">
+                                        <label class="label-amcham">Telephone Number</label>
+                                        <input type="text" class="form-control input-amcham" name="company[t_number]">
+                                    </div>
+                                  </div>
+                              </div>
+                                <hr class="line-content">
+                                <div class="row row-form">
+                                    <div class="col-sm-12 col-md-12 col-xs-12 col-form">
+                                        <div class="checkbox cb-amcham cb-amcham-grey">
+                                           <label class="checkbox-committee">
+                                                <input type="radio" value="0" name="is_invis" required  data-parsley-errors-container="#error-invis">
+                                                <span><i class="glyphicon glyphicon-ok"></i></span>I agree to be listed in the AmCham directories
+                                            </label>
+                                        </div>
+                                        <div class="checkbox cb-amcham cb-amcham-grey">
+                                           <label class="checkbox-committee">
+                                                <input type="radio" value="1" name="is_invis" required>
+                                                <span><i class="glyphicon glyphicon-ok"></i></span>I do not wish my contact details be listed in the AmCham directories
+                                            </label>
+                                        </div><div id="error-invis"></div>
+                                        
+                                    </div>
+                                </div>
+                                <hr class="line-content">
+                                <div class="title-content mb15">Payment Method</div>
+                                <div class="row row-form">
+                                    <div class="col-sm-12 col-md-12 col-xs-12 col-form">
+                                        <div class="checkbox cb-amcham cb-amcham-grey">
+                                           <label class="checkbox-committee">
+                                                <input type="radio" value="payment_online" id="1" name="payment_method"  data-parsley-errors-container="#error-payment-method" required>
+                                                <span><i class="glyphicon glyphicon-ok"></i></span>Online Payment
+                                            </label>
+                                        </div>
+                                        <div class="checkbox cb-amcham cb-amcham-grey">
+                                           <label class="checkbox-committee">
+                                                <input type="radio" value="bank_transfer" id="1" name="payment_method">
+                                                <span><i class="glyphicon glyphicon-ok"></i></span>Bank Transfer
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div id="error-payment-method"></div>
+                                </div>
+                                
+                                <hr class="line-content">
+
+                                <button type="button" class="btn-red btn-link-price tangan" id="pay_button">Join </button>
+
+                            </form>
+                            <!-- end content -->
+                        </div>
+                    </div>
+                    <div class="media-right">
+                        {widget_sidebar}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade fade-events" id="myModalThanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="text-center">
+                    <div class="media logo">
+                        <div class="media-left media-middle"><img src="asset/images/logo.png"></div>
+                        <div class="media-body media-middle">
+                            <span>AMCHAM INDONESIA</span>
+                            <i>AMERICAN CHAMBER OF COMMERCE IN INDONESIA<br>SINCE 1971</i>
+                        </div>
+                    </div>
+                </div>
+                <hr class="line-content line-white">
+                <div class="pop-header">
+                    <div class="title-event-list">Welcome to AmCham Indonesia! </div>
+                    <div class="disclamer-tq">
+                        Your membership application has been successfully submitted. AmCham will now review your application to ensure it is complete and we will respond to you by email within two business days to advise you of payment options and next steps.
+                        <br>
+                        <br>We look forward to welcoming you at our events and getting you involved in our many activities in support of the US-Indonesia commercial relationship.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){  
+        // validasi email member 
+
+        window.Parsley
+        .addValidator('member[email]', function (value, requirement) {
+          // validateString: function(value) {
+                // so we simply return the ajax request:
+            var response = true;
+
+            $.ajax({
+                url:'{base_url_lang}member/check_email/',
+                data: {email: value},
+                dataType: 'json',
+                method: 'POST',
+                async: false,
+                success: function(res) {
+                    response  = true;
+                    // response  = res.valid;
+                }
+            });
+
+            if (response == true) { $("input[name='member[email]']").parsley().reset();}
+            return true === response;
+              },32).addMessage('en', 'member[email]', 'Email has been registered');
+         // messages: {en: 'Email has been registered'}
+        });
+    // );
+        
+
+</script>
+<script>
+    $(document).ready(function(){  
+        // $('input[name="payment_method"]').change(function(){
+        //   if ($(this).val() == 'payment_online') {
+        //     $('#bank_transfer_list').slideUp()
+        //   }else{    
+        //     $('#bank_transfer_list').slideDown()
+        //   }
+          
+        // })
+
+        $('.fade-events').on('hidden.bs.modal', function (e) {
+          window.location.href = '{base_url}';
+        })
+
+        window.proses_form = function($id_form ,status_lanjut) {
+            var btnname = 'Join'; 
+            status_lanjut = (status_lanjut)?status_lanjut:'';
+                $.ajax({
+                  url         : $('#'+$id_form).attr('action')+'/'+status_lanjut,
+                  type        : "POST",
+                  dataType    : "json",     
+                  data        : $('#'+$id_form).serialize(),
+                  error: function (ret) 
+                  {
+                          // console.log(ret);
+                          $('#pay_button').attr('disabled',false);
+                          $('#pay_button').html(btnname);
+
+                          if (typeof ret.modalname != 'undefined' || typeof ret.redirect != 'undefined') {
+                            if (typeof ret.modalname != 'undefined') $('#'+ret.modalname).modal('show');
+                            if (typeof ret.redirect != 'undefined')  window.location = ret.redirect;
+                        }else{
+                            alert('error');
+                        }
+                    },
+                    success     : function(ret)
+                    {
+                        $('#pay_button').attr('disabled',false);
+                        $('#pay_button').text(btnname);
+                          // console.log(ret);
+                          if (ret.error == 1 ) {
+                              if(typeof ret.msg != 'undefined')       alert(ret.msg);
+                              if(typeof ret.modalname != 'undefined') $('#'+ret.modalname).modal('show');
+                              if(typeof ret.redirect != 'undefined')  window.location = ret.redirect; 
+                          }else{
+                              if(typeof ret.modalclose != 'undefined') $('#'+ret.modalclose).modal('hide');
+                              if(typeof ret.clearform != 'undefined')  $('#'+$id_form)[0].reset();
+                              if(typeof ret.modalname != 'undefined')  $('#'+ret.modalname).modal('show');
+                              if(typeof ret.redirect != 'undefined')   window.location = ret.redirect;
+                          }        
+                      }
+                  })
+            }
+
+        // }
+
+       
+    })
+</script>
+
+<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{MITRANS_SERVER_KEY}"></script>
+
+<script type="text/javascript">
+  $('#pay_button').click(function(){
+    // var status_lanjut = 1;
+
+    var $id_form  = $('#pay_button').parents('form').attr('id');
+
+      // if ($("input[name='payment_method']:checked").val() == 'payment_online') {
+      //   $('#bank_transfer_list').find('[data-parsley-errors-container]').each(function(){
+      //     $(this).attr('required',false)
+      //   })
+      // }else{
+      //   $('#bank_transfer_list').find('[data-parsley-errors-container]').each(function(){
+      //     $(this).attr('required',true)
+      //   })
+      // }
+
+      if ($('#'+$id_form).parsley().validate()) {
+        var btnname = $('#pay_button').text();
+        
+        if ($('#pay_button').attr('disabled') == "disabled" ){
+          return false
+        }
+
+        $('#pay_button').text('Loading...');
+        $('#pay_button').attr('disabled',true);
+
+        // payment proses
+        if ($("input[name='payment_method']:checked").val() == 'payment_online') {
+          // payment_online
+          var snapToken = '';
+          $.ajax({
+            url: "{base_url_lang}midtrans/membership_getSnapToken",
+            type: "POST",
+            dataType: 'json',
+            data: $('#form1').serialize(),
+            success: function(ret){
+              var snapToken = ret.token;
+              // input invoice number]
+              $('#'+$id_form).append('<input type="hidden" name="invoice_number" value="'+ret.invoice_number+'">');
+              $('#'+$id_form).append('<input type="hidden" name="success_invoice" value="false">');
+              proses_form($id_form);
+              
+              // SnapToken acquired from previous step
+              snap.pay(snapToken, {
+                // Optional
+                onSuccess: function(result){
+                    proses_form($id_form,1);
+                    $('#myModalThanks').modal('show')
+
+                  //lanjut proses form
+
+                 },
+                // Optional
+                onPending: function(result){
+                    proses_form($id_form,1);
+                    $('#myModalThanks').modal('show')
+                  //lanjut proses form
+                  // proses_form($id_form,status_lanjut);
+                },
+                // Optional
+                onError: function(result){
+                  alert('Error')
+                  },
+                onClose: function(result){
+                  status_lanjut = 0;
+                   $.ajax({
+                      type: 'post',
+                      url: '{base_url_lang}midtrans/payment_cancel/membership/'+ret.invoice_number
+                  })
+                  //lanjut proses form
+                  // proses_form($id_form,status_lanjut);
+
+                }
+              });
+            },
+            error: function(ret){
+              alert('error');
+            }
+          });
+              $("input[name='invoice_number']").remove()
+              $("input[name='success_invoice']").remove()
+        }else{
+            // kalau milih bank transer
+            proses_form($id_form);
+            proses_form($id_form,1);
+            $('#myModalThanks').modal('show')
+        }        
+    }
+      return false;
+  });
+</script>

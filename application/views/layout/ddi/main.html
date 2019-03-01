@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <base href="{base_url}">
+    <title>{seo_title}</title>
+    <link rel="icon" href="{base_url}asset/images/logo.png">
+
+    <!-- Bootstrap -->
+    
+    <link href="{base_url}asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{base_url}asset/css/font-style.css" rel="stylesheet">
+    <link href="{base_url}asset/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="{base_url}asset/css/calendar.css" rel="stylesheet">
+    <link href="{base_url}asset/css/header.css" rel="stylesheet">
+    <link href="{base_url}asset/css/footer.css" rel="stylesheet">
+    <link href="{base_url}asset/css/style.css" rel="stylesheet">
+    <link href="{base_url}asset/css/responsive.css" rel="stylesheet">
+    <!-- <link href="{base_url}asset/css/parsley.css" rel="stylesheet"> -->
+
+    <link href="{base_url}assets/css/fullcalendar-3.7.0/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+    <link href="{base_url}assets/css/fullcalendar-3.7.0/fullcalendar.print.min.css" rel="stylesheet" media="print"/>
+    <link href="{base_url}template/assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+    <link href="{base_url}template/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
+
+    <meta name="description" content="{meta_description}">
+    <meta name="keywords" content="{meta_keywords}">
+
+    {meta_og}
+
+    <script type="text/javascript">
+      var news_title      = "{news_title}";
+      var full_url        = window.location.href;
+      var base_url        = '{base_url}';
+      var this_controller = '{this_controller}';
+      var base_url_lang   = '{base_url_lang}';
+    </script>
+    <style type="text/css">
+      .privacyStyle:hover{
+        text-decoration: underline !important;
+      }
+    </style>
+    <script src="{base_url}asset/js/jquery.min.js"></script>
+    <script >
+      $(document).ready(function(){
+        function check_menu_event(){
+          setTimeout(function () {
+          
+            full_url_up  = window.location.href;
+            last_url     = full_url_up.replace(this_controller, '');
+            u_controller = last_url.split('/')[0];
+            u_function   = last_url.split('/')[1];
+            u_param      = last_url.split('/')[2];
+            if (u_controller == 'member' || u_controller == 'directorys') {
+
+                if (u_controller == 'directorys') {
+                  u_controller = "member";
+                  url_menu_param = "#member-directory";
+                }else if (u_function == "register") {
+                  url_menu_param = "#member-join";
+                }else if(u_function == ""){
+                  url_menu_param = "";
+                }else{
+                  
+                  url_menu_param = u_function;
+                }
+
+                url_menu = "/amcham/en/"+u_controller+'/'+url_menu_param;
+                $('.members-menu ul li').each(function(){
+                  $(this).removeClass('active');
+                });
+
+                $('.members-menu ul').find("a[href='"+url_menu+"']").parent().addClass('active');
+              }
+            },500);
+        }
+
+        check_menu_event();
+
+        $( ".members-menu ul>li , .perent-menu>li>a" ).click(function() {
+          check_menu_event();              
+        });
+      });
+
+    </script>
+    <script>
+    $(function() {
+      $('.datepicker_req').datepicker({
+        dateFormat: 'dd-mm-yy', 
+        changeMonth: true,
+        changeYear: true,
+        beforeShow: function(input) {$(input).unbind('blur')},
+        onClose: function(dateText, inst) {$(this).validationEngine();this.focus();this.blur()}
+      });
+      $('.datepicker').datepicker({
+        dateFormat: 'dd-mm-yy', 
+        changeMonth: true,
+        changeYear: true,
+        autoclose: true
+      });
+    });</script>
+
+    <script src="{base_url}template/assets/plugins/moment/moment.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.1.1/fullcalendar.min.js"></script> 
+
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="{base_url}asset/js/html5shiv.min.js"></script>
+      <script src="{base_url}asset/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5GZFMK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5GZFMK');</script>
+    <!-- End Google Tag Manager -->
+   
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid cf-header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+              {logo}
+              <a href="{base_url}{lang}/{logo_link}" class="logo">
+                <div class="media">
+                  <div class="media-left media-middle"><img src="{base_url}asset/images/{logo_icon}"></div>
+                  <div class="media-body media-middle">
+                    <span>{logo_title}</span>
+                    <i>
+                      {logo_sub_title}                    
+                    </i>
+                  </div>
+                </div>
+              </a>  
+              {/logo}                        
+              
+              <a href="member" class="link-chamber btn-red {signin}">{lang_join_chamber}</a>              
+              <div class="icon-members {signout}">
+                <a href="member/profile" id="name_profile_header">Hello, {member_namadepan} {member_namabelakang}!</a>
+                 <span><img src="{base_url}asset/images/members.png"></span> 
+                <div class="frame-btn-profile">
+                  <i class="glyphicon glyphicon-triangle-top"></i>
+                  <a href="member/logout">Logout</a>
+                </div>
+              </div>
+              
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid cf-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+              <a href="member" class="link-chamber join-mobile btn-red {signin}">{lang_join_chamber}</a>
+
+              <label for="navbar-mobile" class="bars-menu"><span class="fa fa-bars"></span></label>
+              <input type="checkbox" name="" id="navbar-mobile">
+              <nav class="nav-menu navbar-amcham">
+                <div class="header-menu-mobile">
+                  <!-- <a href="member" class="link-chamber btn-red {signin}">{lang_join_chamber}</a> -->
+                  <div class="icon-members {signout}"><span><img src="{base_url}asset/images/members.png"></span> Hello, {member_namadepan}! 
+                    <div class="frame-btn-profile show-desktop">
+                      <i class="glyphicon glyphicon-triangle-top"></i>
+                      <a href="member/logout">Logout</a>
+                    </div>
+                  </div>
+                  <label for="navbar-mobile" class="bars-menu bm-inner"><span class="fa fa-times"></span></label>
+                </div>
+                <ul class="nav navbar-nav">
+                  {header_menu}
+                  <li class="{signout}"><a href="member/logout">Logout</a></li>
+                </ul>
+
+              </nav>
+              <div class="form-search">
+                  <label for="input-search-icon"><i class="glyphicon glyphicon-search"></i></label>
+                  <input type="checkbox" name="" id="input-search-icon">
+                  <div class="form-search-page">
+                     <form action="{search_act}" method="get">
+                      <div class="col-sm-5 col-md-5 col-xs-12 col-form-search">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search..." name="search">
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="submit">Search</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="top-hide container-fluid"></div>
+
+    {content}
+  
+    <div class="container-fluid cf-banner-footer {hide_banner_bottom}">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+              <div class="banner-footer responsive-banner">
+                {banner_bottom}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer>  
+      <div class="container-fluid container-fluid-ft-top">
+        <div class="container">
+          <div class="row">
+            <!-- logo -->
+            <div class="col-sm-4 col-md-4 col-xs-12 ft-tk ">
+              {logo_footer}
+              <a href="{base_url}{lang}/{logo_link}" class="logo">
+                <div class="media">
+                  <div class="media-body media-middle">
+                  <img src="{base_url}asset/images/{logo_icon}">
+                    <span>{logo_title}</span>
+                    <i>
+                      {logo_sub_title}                    
+                    </i>
+                  </div>
+                </div>
+              </a>
+              {/logo_footer}
+            </div>
+            <!-- end-logo -->
+
+            <!-- deskripsi -->
+            <div class="col-sm-8 col-md-8 col-xs-12">
+              {footer_data}
+              <div class="row">
+                <!-- alamat -->
+                <div class="col-sm-6 col-md-5 col-xs-12 col-ft-nav">
+                  <div class="media">
+                    <div class="media-left"><i class="fa fa-map-marker"></i></div>
+                    <div class="media-body">
+                      {f_address}
+                    </div>
+                  </div>
+                </div>
+
+                <!-- kontak -->
+                <div class="col-sm-6 col-md-3 col-xs-12 col-ft-nav">
+                  {contact}
+                  <div class="media">
+                    <div class="media-left"><i class="{logo}"></i></div>
+                    <div class="media-body">
+                      {value}
+                    </div>
+                  </div>
+                  {/contact}
+                </div>
+
+                <!-- sosmed -->
+                <div class="col-sm-12 col-md-4 col-xs-12 col-ft-nav">
+                  <div class="socmed-footer">
+                    {sosmed}
+                    <a href="{link}"><img src="{base_url}asset/images/{image}" alt=""></a>
+                    {/sosmed}
+                  </div>
+                </div>
+
+                <!-- deskripsi -->
+                <div class="col-sm-12 col-md-12 col-xs-12 opening-hours">
+                  {f_description}           
+                </div>
+              </div>
+              {/footer_data}
+            </div>
+            <!-- end-deskripsi -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid container-fluid-ft-btm">
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{base_url}asset/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->     
+	<!-- <script src="{base_url}template/assets/plugins/parsley/dist/parsley.js"></script> -->
+    <script src="{base_url}asset/js/parsley.js"></script><!-- ammar -->
+    <script src="{base_url}template/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="{base_url}asset/js/bootstrap.min.js"></script>
+    <script src="{base_url}asset/js/owl.carousel.min.js"></script>      
+    <script src="{base_url}asset/js/calendar.js"></script>
+    <script src="{base_url}asset/js/custom.js"></script>
+	<script src="{base_url}asset/js/jquery-form.js"></script> <!-- ammar -->
+    <script src="{base_url}asset/js/ajaxfileupload.js"></script> <!-- ammar -->
+	<script src="{base_url}asset/js/search.js"></script> <!-- lutfi -->
+  </body>
+</html>

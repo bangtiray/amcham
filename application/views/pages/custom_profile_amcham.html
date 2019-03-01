@@ -1,0 +1,48 @@
+<div class="modal fade fade-events" id="detailPerson" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="text-center">
+          <div class="media logo">
+            <div class="media-left media-middle"><img src="asset/images/logo.png"></div>
+            <div class="media-body media-middle">
+              <span>AMCHAM INDONESIA</span>
+              <i>AMERICAN CHAMBER OF COMMERCE IN INDONESIA<br>SINCE 1971</i>
+            </div>
+          </div>
+        </div>
+        <hr class="line-content line-white">
+        <div class="pop-header">
+          <div class="title-person">Welcome to AmCham Indonesia! </div>
+          <div class="disclamer-tq">
+           Your membership application has been successfully submitted. AmCham will now review your application to ensure it is complete and we will respond to you by email within two business days to advise you of payment options and next steps.  
+          <br><br>We look forward to welcoming you at our events and getting you involved in our many activities in support of the US-Indonesia commercial relationship.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function(){
+
+    $('.title-cochair,.title-chair').click(function(){ 
+      link = $(this).attr('link');
+      if (link) {
+        window.location = link;
+        return false;
+      }
+      src = $(this).attr('detail');
+      name = $(this).text();
+      if (src !="" && typeof src !="undefined") {
+        $(".title-person").html("<p>"+name+"</p>");
+        $(".disclamer-tq").html(src);
+        $("#detailPerson").modal("show");
+      }
+
+
+    });
+
+  });
+</script>

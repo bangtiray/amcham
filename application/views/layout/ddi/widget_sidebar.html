@@ -1,0 +1,45 @@
+ <div class="media-right">
+ 	<div class="wrap-right">
+		{event}
+ 		<div class="widget-white mb15">
+ 			<!-- <div class="event-type">{category} event</div> -->
+ 			<div class="title-event-list"><a href="{url}">{name}</a></div><!-- <a href="detail-article.html">Red Nose Foundation's Festival of Laughs</a> -->
+ 			<div class="media">
+ 				<div class="media-left media-middle"><span class="icon-time"></span></div>
+ 				<div class="media-body media-middle">{time}</div><!-- Nov 4, 2017   /   18:00 - 20:30 -->
+ 			</div>
+ 			<div class="media">
+ 				<div class="media-left media-middle"><span class="icon-maps"></span></div>
+ 				<div class="media-body media-middle">{place}</div><!-- Ayana Hotel, Midplaza -->
+ 			</div>
+ 		</div>
+ 		{/event}
+ 		<a href="{lang_link_see_events}" class="btn-red">{lang_see_events}</a>
+	
+		{report}
+		<div class="cover-reports mt30 mb15">
+		  <div class="thumbnail-amcham thumb-public">
+		    <img src="{base_url}images/article/large/{img}">          
+		    <a class="link-thumb" href="{url}">
+		      <div class="title-event-list">{title}</div>
+		    </a>
+		  </div>
+		</div> 			
+ 		{/report}
+ 		<a href="{lang_link_see_reports}" class="btn-red">{lang_see_report}</a>
+
+		{newsletter}
+	 		<!-- <div class="cover-newsletter mt30"><img src="{base_url}images/article/small/{img}" alt="newsletter-preview"></div> -->
+	 		<div class="widget-white widget-newsletter mb15 mt30">
+	 			<div class="event-type">{heading}</div><!-- Newsletter  |  Aug 15, 2017 -->
+	 			<div class="title-event-list"><a href="{url}">{title}</a></div><!-- Apindo's Sammy Hamzah interviewed; -->
+	 			<p>{teaser}</p><!-- e-commerce roadmap; Google's free public WI-FI; millennial matters and more. -->
+	 		</div>
+		{/newsletter}
+ 		<a href="{lang_link_see_newsletter}" class="btn-red mb30">{lang_see_newsletter}</a>
+ 		
+
+ 		<div class="btn-blue">Twitter Feed</div>
+ 		<div class="latest-tweets">{feed_twitter}</div>
+ 	</div>
+ </div>
